@@ -1,0 +1,10 @@
+body {
+  text-align: center;
+}
+canvas {
+  /*background-size: cover;*/
+  border: 1px solid black;
+}
+img {
+  display: none;
+}
