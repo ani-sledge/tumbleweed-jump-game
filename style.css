@@ -7,3 +7,39 @@ canvas {
 img {
   display: none;
 }
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 100%;
+  margin: 0 auto; }
+
+canvas {
+  border: 2px solid #888; }
+
+header {
+  width: 70%;
+  margin-left: 15%;
+  margin-bottom: 25px;
+  margin-top: 25px;
+  background-color: #555;
+  color: #fff; }
+  header h1 {
+    margin: 0;
+    padding: 6px 0;
+    font-size: 2.2em; }
+
+#main {
+  margin: 0 auto;
+  text-align: center; }
+
+#directions {
+  width: 600px;
+  margin: 20px auto; }
+  #directions p {
+    padding-top: 20px; }
+span {
+  padding: 5px 10px;
+  color: #fff;
+  background-color: #555;
+  border: 1px solid #555;
+  border-radius: 4px; }
