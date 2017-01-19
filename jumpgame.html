@@ -10,14 +10,19 @@
             <link href='style.css' rel='stylesheet' type='text/css'>
         </head>
         <body>
-            <h1>Jump!</h1>
-
-            <canvas id="Canvas1" width="600" height="200">Your browser does not support HTML5 canvas.</canvas>
-            <img src="images/canvas.png" id="canvas">
-            <img src="images/tumble.png" id="dude">
-            <img src="images/obstacles.png" id="obstacles">
-            <img src="images/play.png" id="play">
-
+            <header>
+              <h1>JUMP!</h1>
+            </header>
+            <div id="main">
+                <canvas id="Canvas1" width="600" height="200">Your browser does not support HTML5 canvas.</canvas>
+                <img src="images/canvas.png" id="canvas">
+                <img src="images/tumble.png" id="dude">
+                <img src="images/obstacles.png" id="obstacles">
+                <img src="images/play.png" id="play">
+            </div>
+            <div id="direction">
+                <p>Use the <span>UP</span> key to jump.</p>
+            </div>
             <script src="script.js"></script> 
         </body>
 </html>
