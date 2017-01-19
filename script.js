@@ -9,13 +9,12 @@ var height = 200;
 var floor = 130;
 var score = 0;
 var time = 0;
-//var count = 0;
-//vel: -0.12, acc: 0.0004
 var isStopped = true;
 var background = document.getElementById("canvas");
 var dudeImg = document.getElementById("dude");
 var playImg = document.getElementById("play");
 var obImg = document.getElementById("obstacles");
+// Moving Objects
 var dude = { x: 50, y: floor, vel: -0.115, acc: 0.0004, up: false, img: dudeImg, width: 50, height: 50, start: 0 };
 var obstacle = { x: width, y: floor, vel: 10, img: obImg, width: 50, height: 50, start: 0 }; 
 var obstacle2 = { x: (width + 300), y: 130, vel: 10, img: obImg, width: 50, height: 50, start: 50 }; 
@@ -28,9 +27,6 @@ var advanceGame = function() {
         dude.start = 0;
     }
     panBackground(background);
-    //Regenerate obstacles with a new image + width offset every so many seconds/frames? 
-    //Add flying/other types of obstacle?
-    //more rolling on tumbleweed?
     panObstacle(obstacle);
     panObstacle(obstacle2);
     jump(dude.up);
