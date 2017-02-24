@@ -1,0 +1,16 @@
+{
+  "name": "jump-game",
+  "version": "1.0.0",
+  "description": "A JavaScript/HTML5 Canvas game in which the user jumps a rolling tumbleweed over oncoming obstacles.",
+  "main": "src/script.js",
+  "scripts": {
+    "doc": "node_modules/jsdoc/jsdoc.js ./src",
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jsdoc": "^3.4.3",
+    "mocha": "^3.2.0"
+  }
+}
