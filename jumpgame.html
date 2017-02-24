@@ -7,22 +7,27 @@
             <!-- Viewport -->
             <meta name="viewport" content="width=device-width, initial-scale=1">
             <title>Jump</title>
-            <link href='style.css' rel='stylesheet' type='text/css'>
+            <link href='css/style.css' rel='stylesheet' type='text/css'>
         </head>
         <body>
             <header>
               <h1>JUMP!</h1>
             </header>
-            <div id="main">
-                <canvas id="Canvas1" width="600" height="200">Your browser does not support HTML5 canvas.</canvas>
-                <img src="images/canvas.png" id="canvas">
-                <img src="images/tumble.png" id="dude">
-                <img src="images/obstacles.png" id="obstacles">
-                <img src="images/play.png" id="play">
-            </div>
-            <div id="direction">
-                <p>Use the <span>UP</span> key to jump.</p>
-            </div>
-            <script src="script.js"></script> 
+
+            <main role="main" id="main">
+                <article id="jumppage" class="gamecontent" >
+                    <canvas id="Canvas1" width="600" height="200">Your browser does not support HTML5 canvas.</canvas>
+                    <img src="images/canvas.png" id="canvas" class="hide">
+                    <img src="images/tumble.png" id="dude" class="hide">
+                    <img src="images/obstacles.png" id="obstacles" class="hide">  
+              
+                  <section id="direction">
+                    <button id="pause"><img class="pause" src="images/pause.png" alt="Pause"></button>
+                    <button id="play"><img class="play" src="images/play.png" alt="Play"></button>
+                    <p>Press the <span>UP</span> key or TAP on the canvas to jump.</p>
+                  </section>
+                </article>
+            </main>
+            <script src="src/script.js"></script> 
         </body>
 </html>
