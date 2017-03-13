@@ -14,10 +14,9 @@ var time = 0;
 var isStopped = true;
 var background = document.getElementById("canvas");
 var dudeImg = document.getElementById("dude");
-var playImg = document.getElementById("play");
 var obImg = document.getElementById("obstacles");
 // Moving Objects
-var dude = { x: 50, y: floor, vel: -0.115, acc: 0.0004, up: false, img: dudeImg, width: 50, height: 50, start: 0 };
+var dude = { x: 50, y: floor, t: 0, up: false, img: dudeImg, width: 50, height: 50, start: 0 };
 var obstacle = { x: width, y: floor, vel: 10, img: obImg, width: 50, height: 50, start: 0 }; 
 var obstacle2 = { x: (width + 300), y: 130, vel: 10, img: obImg, width: 50, height: 50, start: 50 }; 
 var background = {x: 0, y: 0, vel: 2, img: background, width: width, height: height, pos: [0,20] };
@@ -31,20 +30,21 @@ var advanceGame = function() {
     panBackground(background);
     panObstacle(obstacle);
     panObstacle(obstacle2);
-    jump(dude.up);
+    jump();
     ctx.drawImage(dude.img, dude.start, 0, dude.width, dude.height, dude.x, dude.y, dude.width, dude.height);    
     if (detectCollision(dude, obstacle) || detectCollision(dude, obstacle2)) {
         gameOver();
     }
 };
 
-var jump = function(hasJumped) {
-    if (hasJumped) {
-        dude.y = Math.floor(dude.y + (dude.vel * time) + (0.5 * dude.acc * time * time));
-        time = time + 50; 
+var jump = function() {
+    if (dude.up) {
+        dude.t += 1;
+
+        dude.y += 0.5*dude.t*dude.t - 5.75*dude.t;
         if (dude.y > floor) {
             dude.y = floor;
-            time = 0;
+            dude.t = 0;
             dude.up = false;
         }
     }
